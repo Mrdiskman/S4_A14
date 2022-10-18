@@ -24,4 +24,16 @@ export interface IUserUpdate {
     name?: string
     email?: string
     password?: string
+    id?: string
+    isAdm?: boolean
+    isActive?: boolean
+}
+
+export interface IUpdateToken {
+    email: string
+    isAdm: boolean
+    isActive: boolean
+    id: string
+    iat: number
+    exp: number
 }
