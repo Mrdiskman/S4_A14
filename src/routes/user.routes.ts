@@ -10,13 +10,13 @@ import verifyIsAdmMiddleware from "../middlewares/verifyIsAdm.middleware"
 import verifyIsAdmUpdateMiddleware from "../middlewares/verifyIsAdmUpdate.middleware"
 
 export const loginRouter = Router()
-const usersRouter = Router()
+const router = Router()
 
-usersRouter.post("", verifyEmailMiddleware, createUserController)
-loginRouter.post("", userLoginController)
-usersRouter.get("", ensureAuthMiddleware, verifyIsAdmMiddleware,listUserController)
-usersRouter.patch("/:id", ensureAuthMiddleware, verifyIsAdmUpdateMiddleware, updatedUserController)
-usersRouter.delete("/:id", ensureAuthMiddleware, verifyIsAdmMiddleware, deleteUserController)
+router.post("", verifyEmailMiddleware, createUserController)
+router.post("", userLoginController)
+router.get("", ensureAuthMiddleware, verifyIsAdmMiddleware,listUserController)
+router.patch("/:id", ensureAuthMiddleware, verifyIsAdmUpdateMiddleware, updatedUserController)
+router.delete("/:id", ensureAuthMiddleware, verifyIsAdmMiddleware, deleteUserController)
 
 
-export default usersRouter
+export default router

@@ -1,7 +1,7 @@
 import "reflect-metadata"
 import express from "express"
 import usersRouter from "../src/routes/user.routes"
-import {loginRouter} from "../src/routes/user.routes"
+import loginRouter from "../src/routes/login.routes"
 
 const app = express()
 app.use(express.json())
